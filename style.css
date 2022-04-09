@@ -1,20 +1,26 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, :after, :before { box-sizing: inherit; }
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
 
 body {
-	margin: 0;
-	font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .paticka {
-	text-align: center;
-	font-size: 14px;
-	color: silver;
+  text-align: center;
+  font-size: 14px;
+  color: silver;
 }
 
 .paticka a {
-	color: silver;
+  color: silver;
 }
 
 /* -------------------------------------------------- */
@@ -33,3 +39,126 @@ Nastav je receptům jako obrázky na pozadí (tj. nepřidávej je jako <img> do 
 Na rozložení prvků NEPOUŽÍVEJ absolutní pozicování, ale pouze flexboxy.
 Flexboxy mohou být vnořené do sebe, klidně několikrát.
 */
+h1,
+h2 {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+span {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  color: #ffff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffff;
+}
+
+.card-small {
+  min-height: 90px;
+}
+
+.main-card {
+  background-image: url(images/salat.jpg);
+  min-height: 200px;
+}
+
+.card-avocado {
+  background-image: url(images/chlebicek.jpg);
+}
+
+.card-tacos {
+  background-image: url(images/tacos.jpg);
+}
+
+.card-pita {
+  background-image: url(images/cizrna.jpg);
+}
+
+.card-burger {
+  background-image: url(images/burger.jpg);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .small-container{
+	  display: flex;
+	   flex-wrap: wrap;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .main-card {
+    flex: 1 1 100%;
+    min-height: 250px;
+  }
+
+  .card-small {
+    flex: 1 1 50%;
+    min-height: 150px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .border-left{
+	  border-left: 1px solid #ffff;
+  }
+}
+
+@media screen and (min-width: 860px) {
+	 .container {
+    flex-wrap: nowrap;
+  }
+
+  .main-card{
+	  border-right: 1px solid #fff;
+	  flex: 1 1 50%;
+	  min-height: 400px;
+  }
+
+  .card-small{
+	  flex: 1 1 50%;
+	  min-height: 200px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+}
